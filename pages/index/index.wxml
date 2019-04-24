@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class='container'>
+	<image class='poster' mode='aspectFill' src='{{posterPath}}'></image>
+	<view class='card'>
+		<view class='name'>{{name}}</view>
+		<image class='qrcode' src='{{qrCodePath}}'></image>
+	</view>
+	<view class='btns'>
+		<button class='btn' hover-class='red' bindtap='openPoster'>保存到相册，分享到朋友圈</button>
+	</view>
+</view>
+<view class='cover' wx:if='{{visible}}'>
+	<view class='canvas-box'>
+		<canvas id='canvas' class='canvas' canvas-id="firstCanvas">
+		</canvas>
+		<cover-view class='btn' bindtap='savePoster'>保存到相册，分享到朋友圈</cover-view>
+		<cover-view class='btn-close' bindtap='closePoster'>X</cover-view>
+	</view>
+</view>
